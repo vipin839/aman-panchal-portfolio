@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman Panchal | Admin Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body data-page="admin">
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+
+  <header class="site-header">
+    <nav class="top-nav container">
+      <a class="brand" href="index.html"><span>A</span>man.</a>
+      <button class="nav-toggle" aria-label="Toggle menu">Menu</button>
+      <ul class="nav-links" id="siteNav">
+        <li><a data-nav="home" href="index.html">Home</a></li>
+        <li><a data-nav="experience" href="experience.html">Experience</a></li>
+        <li><a data-nav="skills" href="skills.html">Skill Set</a></li>
+        <li><a data-nav="projects" href="projects.html">Projects</a></li>
+        <li><a data-nav="awards" href="awards.html">Honor & Awards</a></li>
+        <li><a data-nav="contact" href="contact.html">Contact me</a></li>
+        <li class="mobile-cv-tab"><a href="Aman kumar Resume _240713_213754.pdf" target="_blank" rel="noopener">Download CV</a></li>
+      </ul>
+      <div class="actions">
+        <a class="btn primary" href="Aman kumar Resume _240713_213754.pdf" target="_blank" rel="noopener">Download CV</a>
+      </div>
+      
+    </nav>
+  </header>
+
+  <main class="container page-main">
+    <section class="admin-login-wrap" id="adminLoginWrap">
+      <div class="admin-login-card">
+        <p class="eyebrow">Secure Access</p>
+        <h1>Admin Login</h1>
+        <p>Enter admin ID and password to edit cards in all sections.</p>
+        <form id="adminLoginForm" class="admin-login-form">
+          <label for="adminId">ID</label>
+          <input id="adminId" name="adminId" type="text" autocomplete="username" required />
+
+          <label for="adminPassword">Password</label>
+          <input id="adminPassword" name="adminPassword" type="password" autocomplete="current-password" required />
+
+          <button class="btn primary" type="submit">Login</button>
+          <p class="status" id="loginStatus">Waiting for login</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="adminContent" hidden>
+      <section class="sub-hero">
+        <p class="eyebrow">Content Manager</p>
+        <h1>Admin Panel</h1>
+        <p>Edit, add, and remove cards for every page. Duration supports month-year or full date format.</p>
+      </section>
+
+      <section class="admin-panel">
+        <div class="admin-tabs" id="adminTabs"></div>
+
+        <div class="admin-toolbar">
+          <button class="btn primary" id="addCardBtn" type="button">Add Card</button>
+          <button class="btn ghost" id="saveBtn" type="button">Save Changes</button>
+          <button class="btn ghost" id="resetBtn" type="button">Reset Resume Data</button>
+          <button class="btn ghost" id="logoutBtn" type="button">Logout</button>
+          <span class="status" id="adminStatus">No unsaved changes</span>
+        </div>
+
+        <div class="admin-cards" id="adminCards"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© 2026 Aman Panchal. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/data.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/admin.js"></script>
+</body>
+</html>
+
+
+
+
